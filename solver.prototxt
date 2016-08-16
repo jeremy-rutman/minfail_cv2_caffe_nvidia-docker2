@@ -1,0 +1,26 @@
+train_net: "train.prototxt"
+test_net: "val.prototxt"
+test_iter: 500
+# make test net, but don't invoke it from the solver itself
+test_interval: 50000 
+display: 20
+average_loss: 20
+
+lr_policy: "step"
+gamma: 0.1
+stepsize: 5000
+# lr for unnormalized softmax
+#lr_policy: "fixed"
+
+base_lr: 1e-3
+#base_lr: 5e-6
+# high momentum
+momentum: 0.95
+#momentum: 0.99
+# no gradient accumulation
+iter_size: 1
+max_iter: 3000000
+weight_decay: 0.0005
+snapshot: 5000
+snapshot_prefix: "train_0816_"
+test_initialization: false
