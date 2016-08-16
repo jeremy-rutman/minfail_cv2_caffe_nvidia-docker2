@@ -152,5 +152,5 @@ COPY deploy.prototxt /root
 COPY solver.prototxt /root
 COPY train.prototxt /root
 COPY val.prototxt /root
-
+WORKDIR /root
 CMD ["bash"]
