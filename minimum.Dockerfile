@@ -144,9 +144,7 @@ ENV PYTHONPATH $PYCAFFE_ROOT:$PYTHONPATH
 ENV PATH $CAFFE_ROOT/build/tools:$PYCAFFE_ROOT:$PATH
 RUN echo "$CAFFE_ROOT/build/lib" >> /etc/ld.so.conf.d/caffe.conf && ldconfig
 
-COPY score.py /opt/caffe/python
 COPY jrlayers.py /opt/caffe/python
-COPY surgery.py /opt/caffe/python
 
 COPY images_and_labels.txt /root
 COPY image.jpg /root
